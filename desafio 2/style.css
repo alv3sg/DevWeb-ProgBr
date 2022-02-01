@@ -1,0 +1,21 @@
+body{
+    background: black;
+    margin: 0px;
+    padding: 0px;
+}
+#sub_conteiner{
+    background-image: url('imagens/backgorund.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 200px;
+    width: 400px;
+    font-style: italic;    
+}
+#sub_conteiner h1 {
+    margin: 0px;
+    padding: 23px 0px 9px 41px;
+}
+#sub_conteiner ul{
+    margin: 0px;
+    list-style: none;
+}
