@@ -1,0 +1,36 @@
+*{
+    margin: auto;
+    padding: 0;
+    text-align: center;
+}
+header {
+    background-color: black;
+    color: white;    
+    width: 100vw;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+header img {
+    width: 150px;
+}
+nav a {
+    color: white;
+}
+main {
+    background-color: rgba(128, 128, 128, 0.349);
+    max-width: 700px;
+    padding: 10px;
+    text-align: justify;
+}
+section p, li, figcaption{
+    text-align: left;
+}
+li {
+    list-style-type: none;
+}
+figcaption {
+    text-indent: 10px;
+}
+section a {
+    font-weight: bold;
+}
