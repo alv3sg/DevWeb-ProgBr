@@ -19,6 +19,10 @@ function initializeCards(cards) {
         cardElement.id = card.id //adiciona o id
         cardElement.classList.add(CARD) //adiciona a classe
         cardElement.dataset.icon = card.icon //adiciona o data-icon
+        cardElement.classList.add("flip")
+        setTimeout(()=>{
+            cardElement.classList.remove("flip")
+        },500)
         createCardContent(card, cardElement)
 
 
@@ -83,3 +87,4 @@ function restart() {
     let gameOverLayer = document.getElementById('gameOver')
     gameOverLayer.style.display = 'none'
 }
+
