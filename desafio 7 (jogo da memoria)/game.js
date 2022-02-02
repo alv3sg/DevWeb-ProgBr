@@ -6,23 +6,28 @@ let game = {
 
     setCard: function(id) {
 
-        let card = this.cards.filter(card => card.id ===id)[0]
-
+        let card = this.cards.filter(card => card.id === id)[0]
+        console.log(card)
         if (card.flipped || this.lockMode) {
             return false
         }
 
         if(!this.fistCard) {
             this.fistCard = card
+            this.fistCard.flipped = true
             return true
         } else {
             this.secondCard = card
+            this.secondCard.flipped = true
             this.lockMode = true
             return true
         }
     },
 
-    checkMatch: function(){
+    checkMatch: function () {
+        if(!this.fistCard || !this.secondCard) {
+            return false
+        }
         return this.fistCard.icon === this.secondCard.icon
     },
 
@@ -30,6 +35,17 @@ let game = {
         this.fistCard = null
         this.secondCard = null
         this.lockMode = false
+    },
+
+    unflipCards(){
+        this.fistCard.flipped = false
+        this.secondCard.flipped = false
+        this.clearCards()
+    },
+
+    checkGameOver(){
+
+        return this.cards.filter(card=>!card.flipped).length == 0
     },
 
     techs: ['bootstrap',
